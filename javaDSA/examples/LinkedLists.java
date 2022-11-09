@@ -4,21 +4,27 @@ import java.util.LinkedList;
 
 public class LinkedLists {
 
-    // SINGLY LINKED LISTS
-    // made up of a chain of nodes. head = start. tail = end (null)
-    // includes some data along with the address of the next node in the line
-
-    // unlike an array, elements don't need to be shifted around to be inserted
+    //                              SINGLY LINKED LISTS
+    //                   head                                      tail
+    //                   node                node                  node
+    //              [data | address] <-> [data | address] <-> [data | address]
+    //
+    // unlike arrays, elements don't need to be shifted around to be inserted
     // take address stored in previous node and assign it to the new node, thus pointing to next node in the line
     // replace address in previous node with address that points to the new node
     // ... and the chain is complete with a lot less CPU power (think millions of elements)
+    //
     // to remove element - just point address to next in line
-    // uses constant time (more efficient)
-    // searching is a lengthier process than arrays as needs to traverse the whole list (linear time)
+    // uses constant time O(1) - more efficient
+    // searching is a lengthier process than arrays as needs to traverse the whole list - O(n) linear time
 
-    // DOUBLY LINKED LISTS
+    //                              DOUBLY LINKED LISTS
+    //                 head                                                          tail
+    //                 node                           node                           node
+    //      [address | data | address] <-> [address | data | address] <-> [address | data | address]
+    //
     // two address stored in each node! each node knows where next AND previous node is
-    // EASIER to SEARCH, however it uses linear time to insert/remove elements
+    // EASIER to SEARCH, however DLL use linear time to insert/remove elements
 
     public static void main(String[] args) {
 
